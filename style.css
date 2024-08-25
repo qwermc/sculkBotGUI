@@ -1,4 +1,5 @@
 body {
+  background-color: var(--tg-theme-secondary-bg-color, #f2f2f7);
     font-family: 'Open Sans', sans-serif;
     margin: 0px;
     padding: 0;
@@ -33,7 +34,7 @@ body {
   }
 
   hr {
-    border-top: 1px solid var(--tg-theme-section-separator-color, #ebebec);
+    border-top: 1px solid var(--tg-theme-section-header-text-color, #85858b);
   }
 
   p {
@@ -50,37 +51,45 @@ body {
   }
 
   .btn0 {
-    border-radius: 28px 28px 28px 28px;
+    background-color: var(--tg-theme-bg-color, #5ac8fb);
+    color: var(--tg-theme-text-color, #fff);
+    border-radius: 10px;
     transition: all 0.2s ease-out;
   }
-  .btn0:focus {
-    border-radius: 10px 10px 10px 10px;
+  .btn0:active {
+    border-radius: 28px;
     transition: all 0.1s ease-out;
   }
 
   .btn1 {
+    background-color: var(--tg-theme-bg-color, #fff);
+    color: var(--tg-theme-text-color, #000);
     border-radius: 28px 28px 5px 5px;
     transition: all 0.1s ease-out;
   }
-  .btn1:focus {
+  .btn1:active {
     border-radius: 50px 50px 5px 5px;
     transition: all 0.1s ease-out;
   }
 
   .btn2 {
+    background-color: var(--tg-theme-bg-color, #fff);
+    color: var(--tg-theme-text-color, #000);
     border-radius: 5px 5px 5px 5px;
     transition: all 0.2s ease-out;
   }
-  .btn2:focus {
+  .btn2:active {
     border-radius: 50px 50px 50px 50px;
     transition: all 0.2s ease-out;
   }
 
   .btn3 {
+    background-color: var(--tg-theme-bg-color, #fff);
+    color: var(--tg-theme-text-color, #000);
     border-radius: 5px 5px 28px 28px;
     transition: all 0.1s ease-out;
   }
-  .btn3:focus {
+  .btn3:active {
     border-radius: 5px 5px 50px 50px;
     transition: all 0.1s ease-out;
   }
@@ -100,8 +109,6 @@ body {
     height: 50px;
     padding: 10px 0;
     margin: 5px 0;
-    background-color: var(--tg-theme-button-color, #50a8eb);
-    color: var(--tg-theme-button-text-color, #fff);
     border: none;
     outline: none;
     font-size: 16px;
@@ -117,8 +124,8 @@ body {
 .ripple:before {
 transition: all 0.2s ease-in;
 border-radius: 50%;
-background-color: var(--tg-theme-bg-color, #ffffff);
-opacity: 0.85;
+background-color: var(--tg-theme-text-color, #000);
+opacity: 0.2;
 content:'';
 position: absolute;
 top: 50%; left: 50%;
@@ -126,11 +133,15 @@ width:0; height:0;
 filter: blur(50px);
 }
 
-.ripple:focus:before {
+.ripple:hover:before {
+  opacity: 0.4;
+}
+
+.ripple:active:before {
 transition: all 0.4s ease;
-width:400px;
-height:400px;
-margin-top:-200px;
-margin-left:-200px;
+width: 400px;
+height: 400px;
+margin-top: -200px;
+margin-left: -200px;
 filter: blur(10px);
 }
